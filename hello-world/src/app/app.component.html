@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <h1 class="display-1">Big Angular Project</h1>
+    <!-- {{homeData|json}} -->
+    <app-template-forms></app-template-forms>
+    <app-users></app-users>
+    <hr>
+
+    <!-- <app-life-cycle></app-life-cycle> -->
+
+    <button type="button" (click)="handleClick()">Click here to view data</button>
+
+
+    <app-home *ngIf="showData" [HomeData]='homeData'></app-home>
+</div>

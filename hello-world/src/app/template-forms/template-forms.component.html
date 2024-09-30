@@ -1,0 +1,36 @@
+<p>template-forms works!</p>
+<!-- <input type="text" [(ngModel)]="uInput" placeholder="typesomething">
+{{uInput}} -->
+
+<div class="row">
+    <div class="col-4 offset-4">
+        <div class="card">
+            <h1>Enter details</h1>
+            <form #formVar="ngForm" (ngSubmit)="handleSubmit(formVar.value)">
+                <div class="form-group">
+                    <label>Enter ID:</label>
+                    <input required type="text" class="form-control" name="empId" [(ngModel)]="takeInputData"
+                        #fieldVar="ngModel" />
+                    <span class="text-danger">Err</span>
+                </div>
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input required type="text" class="form-control" name="name" [(ngModel)]="userName"
+                        #uName="ngModel" />
+                    <span class="text-danger">Err</span>
+                </div>
+                <button [disabled]="formVar.invalid" class="btn btn-primary" type="submit">Submit</button>
+            </form>
+            <div class="card bg-secondary">
+                takeInputData:{{takeInputData}}<br>
+                formVal:{{formVar.value|json}}<br>
+                validOrNot:{{formVar.valid}}<br>
+                {{takeInputData}}
+
+
+
+                fieldVal:{{fieldVar.valid}}<br>
+            </div>
+        </div>
+    </div>
+</div>

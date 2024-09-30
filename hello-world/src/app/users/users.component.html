@@ -1,0 +1,8 @@
+<h1>showing all users</h1>
+<!-- {{users|json}} -->
+<div class="row">
+    <div *ngFor="let aUser of users"  class="col-3 p-3" >
+        <app-user-card [aUser]="aUser"></app-user-card>
+    </div>
+</div>
+<br>

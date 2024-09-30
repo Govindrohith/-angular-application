@@ -1,0 +1,26 @@
+
+ <!-- homeData in child class {{HomeData|json}} -->
+
+ <h1>View all Employees:</h1>
+ <button type="button">hide all</button>
+ <table border="2">
+     <tr>
+         <th>ID</th>
+         <th>NAME</th>
+         <th>AGE</th>
+     </tr>
+     <tr *ngFor="let anEmp of HomeData">
+         <td>{{anEmp.id}}</td>
+         <td>{{anEmp.name}}</td>
+         <td>{{anEmp.age}}</td>
+         <td>
+             <button type="button" (click)="handleView(anEmp)">View</button>
+         </td>
+     </tr>
+ </table>
+ <div *ngIf="selectedEmp">
+     <h1>You have Selected:</h1>
+     {{selectedEmp|json}}
+     <button type="button" (click)="handleHide()">Go Back</button>
+ </div>
+

@@ -1,0 +1,14 @@
+<p>user-card works!</p>
+<div *ngIf="aUser"class="card bg-info">
+    <div class="card-header">{{aUser.name}}</div>
+    <div class="card-body">
+        <p>Username: {{aUser.username}}</p>
+        <p>Email:{{aUser.email}}</p>
+        <p>Address: {{aUser.address|json}}</p>
+        <p>phone: {{aUser.phone}}</p>
+        <p>website: {{aUser.website}}</p>
+    </div>
+    <div class="card-footer">
+        <p>Company:{{aUser.company|json}}</p>
+    </div>
+</div>
